@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 
 const ShowScema = new mongoose.Schema({
-    titie:{
+    title:{
         type:String,
         required:[true, "Title is require"],
-        minlength:[2,"Title must be at least 2 characters"],
-        maxlength:[255,"Title must be at most 255 characters"]
+        minlength:[2,"Title must be at least 2 characters long"],
+        maxlength:[255,"Title must be at most 255 characters long"]
     },
     genre:{
         type:String,
         required:[true, "Genre is require"],
-        minlength:[2,"Genre must be at least 2 characters"],
-        maxlength:[255,"Genre must be at most 255 characters"]
+        minlength:[2,"Genre must be at least 2 characters long"],
+        maxlength:[255,"Genre must be at most 255 characters long"]
     },
     releaseYear:{
         type:Number,
@@ -20,4 +20,4 @@ const ShowScema = new mongoose.Schema({
     }, 
 }, {timestamps:true});
 
-module.exports = mongoose.model('show', ShowScema);
+module.exports = mongoose.model('Show', ShowScema);
